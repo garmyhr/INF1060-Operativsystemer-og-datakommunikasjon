@@ -31,28 +31,6 @@ Kjoer med annen input:
 ./client <IP/Maskinnavn> <Portnummer>
 
 
-SVAKHETER VED OPPGAVEN, IKKE RUKKET TO DO-LIST:
-  1) Programmet sender én og én jobbmelding. Rakk ikke se på en bedre
-  loesning av dette, men kan se at det burde vært høyere prioritert.
-
-  2) Svarer man med bokstaver når man skal angi hvor mange jobber man
-  vil lese inn i 2) hent flere (X antall) jobber, sendes jobber likevel.
-  Har ikke rukket å fikse dette.
-
-  3) Prøvde meg på ctrl + c for suksessfull terminering med signal handler.
-  (void intHandler(int temp){...} signal(SIGINT, intHandler) osv.)
-  Klarte ikke finne ut av hvor det skulle implementeres for aa fungere hele tiden.
-
-  4) Om serveren terminerer før klienten, sier den ikke ifra om dette til klient.
-
-  5) Lagde funksjonen error som automatisk skriver ut perror. Ser at dette
-  kan være unødvendig å implementere inne i funksjonen som jeg også bruker steder
-  der errno ikke blir satt, og "success" blir dermed printet ut ved enkelte feiltermineringer.
-
-Obs! Maskinnavn i stedet for IP-adresse i argv[1] til server skal fungere,
-men fikk ikke testet dette.
-
-
   KILDER - KODE LAANT/MODIFISERT OG BRUKT FRA NETT:
     1) I child 1 og child 2:
     Lese fra read-end av pipe, printe ut til stderr og stdout:
